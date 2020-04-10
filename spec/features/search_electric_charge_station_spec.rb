@@ -5,9 +5,6 @@ RSpec.describe "As a visitor when I visit the home page" do
     visit '/'
     click_button 'Find Nearest Station'
     expect(current_path).to eq('/search')
-    within(first('.station')) do
-      expect(page).to have_content('.name')
-    end
 
     within(first(".station")) do
       expect(page).to have_css(".name")
